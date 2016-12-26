@@ -38,6 +38,7 @@ class UnmodifiableCollectorsListSpec extends Specification {
         unmodifiableList.add(4)
 
         then:
+        printf unmodifiableList.toString()
         thrown(UnsupportedOperationException.class)
     }
 }
