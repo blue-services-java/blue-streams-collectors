@@ -10,7 +10,7 @@ import java.util.function.Supplier;
 import java.util.stream.Collector;
 
 class UnmodifiableCollectorImpl<T, A, R> implements Collector<T, A, R> {
-    static final Set<Collector.Characteristics> CH_ID = Collections.EMPTY_SET;
+    static final Set<Collector.Characteristics> CH_ID = Collections.emptySet();
     static final Set<Collector.Characteristics> CH_UNORDERED_ID = Collections.unmodifiableSet(EnumSet.of(
             Collector.Characteristics.UNORDERED
     ));

@@ -7,7 +7,7 @@ class UnmodifiableSetCollectorImpl<T> extends UnmodifiableCollectorImpl<T, Set<T
         super(
                 HashSet::new,
                 Set::add,
-                (left, right) -> { new HashSet<>(left).addAll(right); return left; },
+                (left, right) -> { left.addAll(right); return left; },
                 Collections::unmodifiableSet,
                 UnmodifiableCollectorImpl.CH_UNORDERED_ID
         );
